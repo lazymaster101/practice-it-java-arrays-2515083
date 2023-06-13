@@ -1,9 +1,18 @@
+import java.util.Arrays;
+
 public class App {
   
   public static Integer findSecondSmallestItem(Integer[] arr) {
-    if(arr.length==0||arr.length==1){
+    if(arr.length<=1){
       return null;
     }
+    Arrays.sort(arr);
+    for(int x=0; x<arr.length-1; x++){
+      if(arr[x+1]!=arr[x]){
+        return arr[x+1];
+      }
+    }
+    return null;
     // int smallest=arr[0];
     // int secondsmallest=smallest;
     // for(int x=0; x<arr.length; x++){
@@ -12,11 +21,14 @@ public class App {
     //     smallest=arr[x];
     //     secondsmallest=temp;
     //   }
-    //   else if(arr[x]<secondsmallest){
+    //   else if(arr[x]<secondsmallest && arr[x]!=smallest){
     //     secondsmallest=arr[x];
     //   }
     // }
-    // return secondsmallest;
+    // if(secondsmallest==smallest){
+    //   return null;
+    // }
+     // return secondsmallest;
   }
     
   public static void main(String args[]) {
