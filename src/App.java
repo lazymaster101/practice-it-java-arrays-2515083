@@ -1,7 +1,12 @@
 public class App {
   
   public static void printTriangle(Object[] arr) {
-
+    for(int x=0; x<arr.length; x++){
+      for(int y=0; y<=x; y++){
+        System.out.print(arr[y]);
+      }
+      System.out.println();
+    }
  }
     
   public static void main(String args[]) {
