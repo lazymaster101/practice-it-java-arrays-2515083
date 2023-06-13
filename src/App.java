@@ -3,7 +3,13 @@ import java.util.Arrays;
 public class App {
     
   public static void reverse(int[] arr) {
-    
+    if(arr.length>1){
+      for(int x=0; x<arr.length/2; x++){
+        int temp=arr[x];
+        arr[x]=arr[arr.length-x-1];
+        arr[arr.length-x-1]=temp;
+      }
+    }
   }
   
   public static void main(String args[]) {
