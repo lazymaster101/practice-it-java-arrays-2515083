@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-import javax.swing.text.DefaultStyledDocument.ElementSpec;
-
 public class App {
   
   public static Object[] rotateRight(Object[] arr) {
