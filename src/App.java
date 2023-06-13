@@ -3,7 +3,17 @@ import java.util.Arrays;
 public class App {
 
   public static void moveZerosToTheEnd(int[] arr) {
-    
+    for(int x=0; x<arr.length; x++){
+      if(arr[x]==0){
+        for(int y=x; y<arr.length; y++){
+          if(arr[y]!=0){
+            arr[x]=arr[y];
+            arr[y]=0;
+            break;
+          }
+        }
+      }
+    }
   }
 
   public static void main(String[] args) {
